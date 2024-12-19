@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # check if we are a codespace
-if [ "$CODESPACE" = "true" ]; then
+if [ "$CODESPACES" = "true" ]; then
     export DOTFILES="/workspaces/.codespaces/.persistedshare/dotfiles"
 else
-    export DOTFILES="$HOME/codespace/dotfiles"
+    export DOTFILES="$HOME/dotfiles"
 fi
 
 sudo apt update
