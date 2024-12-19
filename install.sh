@@ -7,7 +7,9 @@ sudo apt upgrade -y
 sudo apt install neovim -y
 
 # install aws tools
-sudo apt install awscli -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 
 # install go tools
 echo 'deb [trusted=yes] https://repo.goreleaser.com/apt/ /' | sudo tee /etc/apt/sources.list.d/goreleaser.list
