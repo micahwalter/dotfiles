@@ -11,7 +11,11 @@ sudo apt update
 sudo apt upgrade -y
 
 # install neovim
-sudo apt install neovim -y
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+sudo rm nvim-linux64.tar.gz
+sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
 mkdir -p $HOME/.config/nvim
 ln -s $DOTFILES/.config/nvim/init.lua $HOME/.config/nvim/init.lua
 
