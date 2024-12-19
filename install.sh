@@ -12,6 +12,7 @@ sudo apt upgrade -y
 
 # install neovim
 sudo apt install neovim -y
+mkdir -p $HOME/.config/nvim
 ln -s $DOTFILES/nvim/init.vim $HOME/.config/nvim/init.vim
 
 # install tmux
