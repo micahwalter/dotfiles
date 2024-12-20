@@ -12,6 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
-local plugins = {}
+local plugins = {
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+}
 
+--require lazy
 require("lazy").setup(plugins, opts)
+
+--require catppuccin
+require("catppuccin").setup()
+
+--set the colorscheme to it!
+vim.cmd.colorscheme "catppuccin"
