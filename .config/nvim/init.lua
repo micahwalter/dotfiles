@@ -20,7 +20,9 @@ local plugins = {
 require("lazy").setup(plugins, opts)
 
 --require catppuccin
-require("catppuccin").setup()
+require("catppuccin").setup({
+  flavour = "mocha",
+})
 
 --set the colorscheme to it!
 vim.cmd.colorscheme "catppuccin"
