@@ -1,0 +1,3 @@
+db_driver: sqlite3
+db_path: /home/ubuntu/.local/share/chat-cli/data.db
+environment: development
